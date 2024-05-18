@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Hide comments",
+  "description": "Hide youtube comments",
+  "version": "1.0",
+  "action": {
+    "default_popup": "comments.html",
+    "default_icon": "hide_comments.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["comments.js"],
+      "matches": ["https://www.youtube.com/*"]
+    }
+  ],
+  "permissions": ["activeTab"]
+}
